@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        app:srcCompat="@drawable/main_asset_icon_trans" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="곰다이어리"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        app:fontFamily="@font/nanumsquareotfb" />
+
+    <GridView
+        android:id="@+id/main_asset_diary_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="40dp"
+        android:columnWidth="80dp"
+        android:horizontalSpacing="30dp"
+        android:numColumns="4"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="30dp" />
+
+    <Button
+        android:id="@+id/main_asset_fbutton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/main_asset_coloring_bar"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/main_asset_fbutton_deactivate" />
+
+    <RelativeLayout
+        android:id="@+id/main_asset_popup"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignBottom="@+id/main_asset_fbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="65dp"
+        android:layout_marginRight="65dp"
+        android:background="@drawable/rounded_rectangle_color_black_80"
+        android:visibility="gone">
+
+        <com.pirates.choi.hiswindtester.utils.RoundImageView
+            android:id="@+id/main_asset_pp_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/main_asset_pp_frame" />
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@+id/main_asset_pp_view"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/main_asset_pp_view"
+            android:layout_toRightOf="@+id/main_asset_pp_view"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/main_asset_class_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="병과"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                app:fontFamily="@font/nanumsquareotfb" />
+
+            <TextView
+                android:id="@+id/main_asset_name_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="이름"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                app:fontFamily="@font/nanumsquareotfb" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/main_asset_write_diary_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignLeft="@+id/main_asset_pp_view"
+            android:layout_alignStart="@+id/main_asset_pp_view"
+            android:layout_below="@+id/main_asset_pp_view"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/main_asset_write_diary" />
+
+        <LinearLayout
+            android:id="@+id/main_asset_day_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignTop="@+id/main_asset_write_diary_button"
+            android:layout_marginLeft="30dp"
+            android:layout_toEndOf="@+id/main_asset_write_diary_button"
+            android:layout_toRightOf="@+id/main_asset_write_diary_button"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/main_asset_left_day_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/rounded_rectangle_color_white_stroke"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="392"
+                android:textColor="@android:color/white"
+                android:textSize="36sp"
+                app:fontFamily="@font/nanumsquareotfb" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignEnd="@+id/main_asset_day_layout"
+            android:layout_alignRight="@+id/main_asset_day_layout"
+            android:layout_alignTop="@+id/main_asset_pp_view"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/main_asset_heart" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/main_asset_coloring_bar"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/register_asset_coloring_bar"
+        android:orientation="horizontal" />
+
+</RelativeLayout>

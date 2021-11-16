@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:id="@+id/rd_asset_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/rd_asset_date_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/nanumsquareotfb"
+            android:text="0000.00.00"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/rd_asset_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:fontFamily="@font/nanumsquareotfb"
+            android:text="돌아가기"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/rd_asset_modify_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:fontFamily="@font/nanumsquareotfb"
+            android:text="수정"
+            android:textColor="@android:color/white"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/rd_asset_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rd_asset_title_bar"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/nanumsquareotfbb"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="무제"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/rd_asset_diary_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rd_asset_title_view"
+        android:layout_marginBottom="15dp"
+        android:background="@null"
+        android:ems="10"
+        android:fontFamily="@font/nanumsquareotfr"
+        android:gravity="top"
+        android:hint="DISPLAY HERE"
+        android:inputType="textMultiLine"
+        android:lines="@null"
+        android:maxLength="480"
+        android:padding="15dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="16sp" />
+
+    <com.pirates.choi.hiswindtester.utils.RoundImageView
+        android:id="@+id/rd_asset_add_picture_view"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@+id/rd_asset_diary_view"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/wd_asset_add_picture_attached"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/rd_asset_coloring_bar"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/register_asset_coloring_bar_wd"
+        android:orientation="horizontal" />
+
+</RelativeLayout>

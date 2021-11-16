@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:id="@+id/wd_asset_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/nanumsquareotfb"
+            android:text="다이어리 작성"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/wd_asset_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:fontFamily="@font/nanumsquareotfb"
+            android:text="취소"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/wd_asset_complete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:fontFamily="@font/nanumsquareotfb"
+            android:text="완료"
+            android:textColor="@android:color/white"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/wd_asset_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/wd_asset_title_bar"
+        android:background="@android:color/white"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/wd_asset_date_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/nanumsquareotfb"
+            android:text="2019.07.19"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/wd_asset_input_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:ems="10"
+            android:fontFamily="@font/nanumsquareotfb"
+            android:gravity="center_vertical|center_horizontal"
+            android:inputType="textPersonName"
+            android:maxLength="7"
+            android:text="무제"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/wd_asset_textwatcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/nanumsquareotfb"
+            android:text="0 / 480"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/wd_asset_input_diary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/wd_asset_title_layout"
+        android:layout_marginBottom="15dp"
+        android:background="@null"
+        android:ems="10"
+        android:fontFamily="@font/nanumsquareotfr"
+        android:gravity="top"
+        android:hint="오늘의 감정을 자유롭게 적어보세요"
+        android:inputType="textMultiLine"
+        android:lines="@null"
+        android:maxLength="480"
+        android:padding="15dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="14sp" />
+
+    <com.pirates.choi.hiswindtester.utils.RoundImageView
+        android:id="@+id/wd_asset_add_picture_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@+id/wd_asset_input_diary"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/wd_asset_add_picture" />
+
+    <RelativeLayout
+        android:id="@+id/wd_asset_palett_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/wd_asset_add_picture_button"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/wd_asset_add_picture_button"
+        android:layout_toStartOf="@+id/wd_asset_add_picture_button"
+        android:background="@drawable/rounded_rectangle_color_orange">
+
+        <ImageView
+            android:id="@+id/wd_asset_palett_button_image"
+            android:layout_width="25dp"
+            android:layout_height="6dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/wd_asset_up_palett" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/wd_asset_palett_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/wd_asset_input_diary"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/wd_asset_palett_button"
+        android:layout_toStartOf="@+id/wd_asset_palett_button"
+        android:background="@drawable/wd_asset_palett_frame"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nanumsquareotfb"
+            android:text="Background Palett"
+            android:textColor="@android:color/white"
+            android:textSize="13dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView5"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/wd_asset_palett_1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/palett_1_oval" />
+
+                <Button
+                    android:id="@+id/wd_asset_palett_2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/palett_2_oval" />
+
+                <Button
+                    android:id="@+id/wd_asset_palett_3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/palett_3_oval" />
+
+                <Button
+                    android:id="@+id/wd_asset_palett_4"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/palett_4_oval" />
+
+                <Button
+                    android:id="@+id/wd_asset_palett_5"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/palett_5_oval" />
+
+                <Button
+                    android:id="@+id/wd_asset_palett_6"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/palett_6_oval" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/wd_asset_palett_7"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/palett_7_oval" />
+
+                <Button
+                    android:id="@+id/wd_asset_palett_8"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/palett_8_oval" />
+
+                <Button
+                    android:id="@+id/wd_asset_palett_9"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/palett_9_oval" />
+
+                <Button
+                    android:id="@+id/wd_asset_palett_10"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/palett_10_oval" />
+
+                <Button
+                    android:id="@+id/wd_asset_palett_11"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/palett_11_oval" />
+
+                <Button
+                    android:id="@+id/wd_asset_palett_12"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/palett_12_oval" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/wd_asset_coloring_bar"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/register_asset_coloring_bar_wd"
+        android:orientation="horizontal" />
+
+</RelativeLayout>

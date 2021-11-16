@@ -1,0 +1,44 @@
+<com.pirates.choi.hiswindtester.diary.SquareFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/squareFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/diary_item_asset_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/diary_item_asset_ds"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/palett_1"
+            android:gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:id="@+id/diary_item_asset_day_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/nanumsquareotfb"
+                android:text="20"
+                android:textColor="@android:color/white"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/diary_item_asset_ds"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:text="2019.02"
+            android:textColor="@android:color/white"
+            android:textSize="11sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</com.pirates.choi.hiswindtester.diary.SquareFrameLayout>
